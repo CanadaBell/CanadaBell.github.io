@@ -1,0 +1,33 @@
+@import "variables.css";
+
+body {
+    background-color: #121212;
+    color: #f3f0ce;
+}
+header {
+    background-color: #1f1f1f;
+
+}
+.split {
+    background-color: var(--dark-mode-purple)
+}
+nav {
+    background-color: #232323;
+    color: #f3f0ce;
+    
+}
+.dropdiv {
+    background-color: #1b1b1b;
+}
+.dropdown-content {
+    background-color: #323232;
+}
+.dropdown-content a {
+    color: #f3f0ce;
+}
+.dropdown:hover .dropdiv {
+    background-color: var(--dark-mode-purple);
+}
+.dropdown-content a:hover {
+    background-color: var(--dark-mode-hover);
+}

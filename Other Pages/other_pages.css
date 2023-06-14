@@ -1,0 +1,60 @@
+@import "../variables.css";
+@import "../colours.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+header {
+    text-align: center;
+    font-size: 1.7rem;
+    height: 25vh;
+    position: relative;
+}
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+nav {
+    padding: 30px 50px;
+    font-size: 1.1rem;
+    display: flex;
+}
+nav a { 
+    text-decoration: none;
+    background-color: #1b1b1b;
+    color: #f3f0ce;
+    padding: 7px 10px;
+    border-radius: var(--rounding);
+    text-align: center;
+    margin: 0px 20px 0px 10px;
+    transition: all 500ms ease;
+}
+nav a:hover:not(.active){
+    padding: 7px 30px;
+    background-color: var(--dark-mode-hover);
+}
+.active {
+    background-color: var(--dark-mode-purple);
+    cursor: context-menu;
+    padding: 7px 30px;
+}
+article {
+    text-align: center;
+    font-size: 1.7rem;
+}
+article h2 {
+    margin: 50px 0 50px 0;
+}
+input {
+    background-color: #232323;
+    border-color: #1f1f1f;
+    width: 5em;
+    color: #f3f0ce;
+    font-size: 2em;
+}
