@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         y1 = y1 * 1 
 
         if (slope == false) { 
-            slope = '' 
+            slope = 0 
         }
  
         testForstring: if (isNaN(slope) == true) {
