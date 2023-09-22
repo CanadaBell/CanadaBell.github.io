@@ -5,18 +5,27 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math</title>
 </head>
 <body>
     <header>
-        <h1>Math Website</h1>
+        <h1>UniversalCalc Hub</h1>
+        <div id="search-holder">
+            <input id="search-bar" onkeyup="searchBar()" placeholder="Search">
+            <div id="auto-complete">
+                <a class="result hidden" href="Other Pages/Convertions/g_to_lbs.html">Grams to Lbs</a>
+                <a class="result hidden" href="Other Pages/Convertions/m_to_ft.html">Meters to Feet</a>
+                <a class="result hidden" href="Other Pages/Linear Equations/line_from_2.html">Line Fom 2 Points</a>
+                <a class="result hidden"href="Other Pages/Linear Equations/line_from_slope.html">Line From Slope and Point</a>
+                <a class="result hidden"href="Other Pages/Linear Equations/solutions.html">Solutions of 2 Lines</a>
+                <a class="result hidden"href="Other Pages/General Tools/powers.html">Powers</a>
+                <a class="result hidden"href="Other Pages/General Tools/factors.html">Factors</a>
+            </div>
+        </div>
+        
     </header>
-    <section>
-        <p>Welcome to the best site for all your calcuation needs</p>
-        <hr class="split">
-        <p>Click any of the links below to go to that calculator</p>
-    </section>
     <nav>
         <div class="dropdown">
             <div class="dropdiv">Unit Convertions</div>
@@ -35,10 +44,10 @@
             </div>
         </div>
         <div class="dropdown">
-            <div class="dropdiv">TBD</div>
+            <div class="dropdiv">General Tools</div>
             <div class="dropdown-content">
-                <a href="#">TBD</a>
-                <a>TBD</a>
+                <a href="Other Pages/General Tools/powers.html">Powers</a>
+                <a href="Other Pages/General Tools/factors.html">Factors</a>
                 <a>TBD</a>
             </div>
         </div>
