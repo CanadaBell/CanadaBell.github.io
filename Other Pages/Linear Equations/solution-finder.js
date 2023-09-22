@@ -1,9 +1,5 @@
-l1 = ''
-y1 = ''
-
-b1 = ''
-
-l2 = ''
+equationOne = ''
+equationTwo = ''
 
 
 window.onload = function() {
@@ -12,48 +8,32 @@ window.onload = function() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("line1").addEventListener('input', () => {
-        l1 = document.getElementById('line1').value
-        l2 = document.getElementById('line2').value
-        mx1 = ''
 
-        if (!l1) {
-            x = 0
-        }
+    const allInputs = document.querySelectorAll('input')
+    allInputs.forEach(input => {
+        input.addEventListener('input', () => { 
+            equationOne = document.getElementById('line1').value.toLowerCase()
+            equationTwo = document.getElementById('line2').value.toLowerCase()
+            
+            equationOne = equationOne.split(' ')
 
-        l1 = l1.replaceAll(' ', '')
+            arrayLength = equationOne.length
 
-        if (x = 0) {
-            equal = -1
-        } else {
-            equal = l1.indexOf('=') 
-        }
-        
-        if (equal == -1) {
-            document.getElementById("error").innerHTML = "*Please enter a valid equation*"
-            l1l = ''
-            l1r = ''
-        } else {
-            document.getElementById("error").innerHTML = ''
-            l1l = l1.slice(0, equal)
-            l1r = l1.slice(equal + 1)
-        }
+            for (let index = 0; index < arrayLength; index ++ ) {
+                if (equationOne[index] == '+' || equationOne[index] == '-') {
+                    equationOne[index] = equationOne[index] + equationOne.splice(index + 1, 1)
+                    arrayLength--
+                }
+                continue
+            
+            }
 
-        if (l1r == '') {
-            document.getElementById("error").innerHTML = "*Please enter a valid equation*"
-        } else {
-            document.getElementById("error").innerHTML = ''
-        }
+            equationOne.splice(equationOne.indexOf("="), 1)
 
-        if (l1.includes('x') == false || l1.includes('y') == false) {
-            document.getElementById("error").innerHTML = "*Please enter a valid equation*"
-        } else {
-            document.getElementById("error").innerHTML = ''
-        }
+            console.log(equationOne)
 
-        plus = l1.indexOf('+')
 
-        console.log(plus)
 
+        })
     })
 })

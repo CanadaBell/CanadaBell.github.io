@@ -142,4 +142,3 @@ nav {
 .dropdown-content p:last-child {
     border-radius: 0 0 calc(var(--rounding) / 2) calc(var(--rounding) / 2);
 }
-}
