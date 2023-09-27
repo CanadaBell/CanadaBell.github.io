@@ -1,11 +1,7 @@
 @import "variables.css";
 @import "colours.css";
 
-@media screen and (max-width: 640px) {
-    nav {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
+
 
 * {
     margin: 0;
@@ -56,6 +52,7 @@ header h1 {
 #search-bar:hover {
     width: 40%;
     background-color: #0090C3;
+    color: ;
 }
 #search-bar:focus { 
     outline: 0; 
@@ -95,6 +92,12 @@ nav {
     column-gap: 20px; /* Adjust this value to change the gap between columns */
     row-gap: 10px;
 }
+
+@media screen and (max-width: 576px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
 
 .dropdiv {
     box-sizing: border-box;

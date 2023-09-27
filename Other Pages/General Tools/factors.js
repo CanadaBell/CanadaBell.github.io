@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 l2.push(q)
             }
         }
-        if (l1[-1] == l2[-1]) {
-            l1.pop()
-            l2.pop()
-        }
         l2.reverse()
     
         listOfFactors = l1 + "," + l2
