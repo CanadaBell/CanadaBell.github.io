@@ -155,7 +155,7 @@ nav {
     nav {
         grid-template-columns: repeat(2, 1fr);
         height: 70vh;
-        padding: 30px 50px;
+        padding: 30px 0px;
         row-gap: 0;
     }
 }
