@@ -23,6 +23,28 @@
             flex-direction: column;
             margin-right: 50px;
         }
+        @media screen and (max-width: 576px) {
+            #lbs-and-oz {
+                flex-direction: column;
+            } 
+            #lbs {
+                margin: 0;
+            }
+        }
+        hr {
+            width: 90%;
+            margin-top: 50px;
+            border: none;
+            height: 3px;
+            background-color: blueviolet;
+            border-radius: var(--rounding);
+            visibility: hidden;
+        }
+        @media screen and (max-width: 576px) {
+            hr {
+                visibility: visible;
+            }
+        }
     </style>
 </head>
 <body>
@@ -37,6 +59,7 @@
     <article>
         <h2>Grams (g)</h2>
         <input id="grams">
+        <hr>
         <div id="lbs-and-oz">
             <div id="lbs">
                 <input id="pounds">

@@ -58,3 +58,8 @@ input {
     color: #f3f0ce;
     font-size: 2em;
 }
+@media screen and (max-width: 576px) {
+    nav {
+        font-size: 0.9rem;
+    }
+}

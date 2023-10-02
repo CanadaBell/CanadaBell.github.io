@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../other_pages.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line From 2 Points</title>
+    <style>
+        .graph-container {
+            display: flex;
+            box-sizing: border-box;
+            margin: 25px 0px 25px 0px;
+        }
+        .point {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 5em;
+            flex-basis: 25%;
+            justify-content: center;
+        }
+        .point p {
+            font-size: 2em;
+        }
+        .point input {
+            margin-top: 50px;
+        }
+        #p1 {
+            color: rgb(0, 255, 0);
+        }
+        #p2 {
+            color: rgb(255, 255, 0);
+        }
+        
+        #sketch-holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Line From 2 Points</h1>
+    </header>
+    <nav>
+        <a href="../../index.html" class="home">Home</a>
+        <a href="line_from_2.html" class="active">Line From 2 Points</a>
+        <a href="line_from_slope.html">Line From Slope and Point</a>
+        <a href="solutions.html">Solutions of 2 Lines</a>
+    </nav>
+    <div class="graph-container">
+        <div class="point">
+            <p id="p1">Point 1</p>
+            <input id="point1x" name="x1"> <span>x</span>
+            <input id="point1y" name="y1"> <span>y</span>
+        </div>
+        <div id="sketch-holder">
+            <script src="2pt_line.js"></script>    
+        </div>
+        <div class="point">
+            <p id="p2">Point 2</p>
+            <input id="point2x" name="x2"> <span>x</span>
+            <input id="point2y" name="y2"> <span>y</span>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
