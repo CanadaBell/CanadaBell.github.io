@@ -4,13 +4,18 @@ var canvasWidth = 600
 var canvasHeight = 600
 // Base canvas dimentions
 
-const canvasChangeAmount = (600 /(Math.round(screen.width / 50) * 50)).toFixed(2)
+var canvasChangeAmount = (600 /(Math.round(screen.width / 50) * 55)).toFixed(2)
 // divides 600 by the width of the user's screen -> rounds number to nearest hundreth (0.0?)
 
 if (screen.width < 576) { // Checks if user is on phone
-  canvasWidth = Math.floor(canvasWidth / canvasChangeAmount) 
-  canvasHeight = Math.floor(canvasHeight / canvasChangeAmount)
+  canvasWidth = (Math.floor(canvasWidth / canvasChangeAmount)) - 70
+  canvasHeight = (Math.floor(canvasHeight / canvasChangeAmount)) - 70
   // canvas dimentions change depending on the size of the phone screen
+  if (canvasWidth >= screen.width) {
+    biggerThanAmount = Math.floor(canvasWidth / screen.width)
+    canvasWidth = (canvasWidth - (60 * biggerThanAmount))
+    canvasHeight = (canvasHeight - (60 * biggerThanAmount))
+  }
 }
 
 const halfOfCanvasW = canvasWidth / 2
@@ -24,11 +29,11 @@ let y1 = halfOfCanvasH, y2 = halfOfCanvasH
 
 
 document.addEventListener('DOMContentLoaded', function() { // Clears input each time page loads
+  document.getElementById('point1x').value = ''
   document.getElementById('point1y').value = ''
   document.getElementById('point2x').value = ''
   document.getElementById('point2y').value = ''
 })
-
 
 document.addEventListener('DOMContentLoaded', () => { // Code that reads inputs
   
@@ -76,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => { // Code that reads inputs
 
       x1 *= 1; y1 *= 1; y1 *= 1; y2 *= 1 
       // Turns each string to int 
-
 
       // Checks if inputed value is less than -25 or greater than 25, if yes, it check whether or not the number is negative or positive and changes the number (for all inputs)
       if (x1 < -25 || x1 > 25) {
@@ -146,7 +150,7 @@ function draw() {
   line(x1, y1, x2, y2)
 
   if (screen.width < 576) {
-    strokeWeight(3.5)
+    strokeWeight(6)
   } else {
     strokeWeight(7)
   }
@@ -159,10 +163,20 @@ function draw() {
   point(x2, y2)
 }
 
-function windowResized() {
-  if (screen.width < 567) {
-    resizeCanvas(canvasWidth, canvasHeight)
-  } else {
-    resizeCanvas(600, 600)
-  }
-}
+// function windowResized() {
+//   canvasHeight = 600
+//   canvasWidth = 600
+//   if (screen.width < 567) {
+//     canvasWidth = (Math.floor(canvasWidth / canvasChangeAmount)) - 70
+//     canvasHeight = (Math.floor(canvasHeight / canvasChangeAmount)) - 70
+//     // canvas dimentions change depending on the size of the phone screen
+//     if (canvasWidth >= screen.width) {
+//       biggerThanAmount = Math.floor(canvasWidth / screen.width)
+//       canvasWidth = (canvasWidth - (60 * biggerThanAmount))
+//       canvasHeight = (canvasHeight - (60 * biggerThanAmount))
+//     }
+//     resizeCanvas(canvasWidth, canvasHeight)
+//   } else {
+//     resizeCanvas(600, 600)
+//   }
+// }

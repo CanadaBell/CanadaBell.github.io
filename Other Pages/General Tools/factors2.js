@@ -11,13 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById("numberToFactor").addEventListener('input', () => { 
         numberToFactor = document.getElementById('numberToFactor').value
-        l1 = []
-        l2 = []
 
         if (!numberToFactor) {
             numberToFactor = 0
             document.getElementById('factors').innerHTML = "-"
         }
+
         if (numberToFactor.length > 9){
             numberToFactor = numberToFactor.slice(0, 9)
             document.getElementById('numberToFactor').value = numberToFactor.slice(0, 9)
@@ -33,12 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             q = Math.floor(numberToFactor/i)
             r = numberToFactor % i
             if (r == 0) {
-                l1.push(i)
-                l2.push(q)
+                listOfFactors = listOfFactors + (`(${i}x${q})`)       
             }
         }
-
-        listOfFactors = l1 + "<br>" + l2
 
         document.getElementById('factors').innerHTML = listOfFactors
         if (isOverflowing(document.getElementById('factors'))) {

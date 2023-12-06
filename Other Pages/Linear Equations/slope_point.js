@@ -1,24 +1,31 @@
-// *** Variables ***
+// Variables
 
-// ** Line **
+var canvasWidth = 600 
+var canvasHeight = 600
+// Base canvas dimentions
 
-// * Point 1 *
-let x1 = 300
-let y1 = 300
+var canvasChangeAmount = (600 /(Math.round(screen.width / 50) * 55)).toFixed(2)
+// divides 600 by the width of the user's screen -> rounds number to nearest hundreth (0.0?)
 
-// * Point 2 *
-let x2 = 300
-let y2 = 300
+if (screen.width < 576) { // Checks if user is on phone
+  canvasWidth = (Math.floor(canvasWidth / canvasChangeAmount)) - 70
+  canvasHeight = (Math.floor(canvasHeight / canvasChangeAmount)) - 70
+  // canvas dimentions change depending on the size of the phone screen
+  if (canvasWidth >= screen.width) {
+    biggerThanAmount = Math.floor(canvasWidth / screen.width)
+    canvasWidth = (canvasWidth - (60 * biggerThanAmount))
+    canvasHeight = (canvasHeight - (60 * biggerThanAmount))
+  }
+}
 
-// * Slope *
-let slope = 0
-let rise = 0
-let run = 0 
+const halfOfCanvasW = canvasWidth / 2
+const halfOfCanvasH = canvasHeight / 2
+// gets what half of the canvas width / height 
 
 
-// ** Canavs **
-const canvasWidth = 600
-const canvasHeight = 600
+let x1 = halfOfCanvasW, x2 = halfOfCanvasW
+let y1 = halfOfCanvasH, y2 = halfOfCanvasH
+// sets x1 and x2 to be half of the canvas width | sets y1 and y2 to be half of the canvas width
 
 
 // Clears inputs after the inputs load
