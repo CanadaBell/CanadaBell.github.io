@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../JS/Convertions/g_to_lbs.js"></script>
+    <link rel="stylesheet" href="../../CSS/other_pages.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grams to Lbs</title>
+    <script>
+        function openNav() {
+            if (screen.width < 576) {
+                document.getElementById("navBar").style.width = "80%"
+            } else {
+                document.getElementById("navBar").style.width = "20%"
+            }
+        }
+        function closeNav() {
+            document.getElementById("navBar").style.width = "0"
+        }
+        
+    </script>
+    <style>
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #lbs-and-oz {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        #lbs {
+            display: flex;
+            flex-direction: column;
+            margin-right: 50px;
+        }
+        @media screen and (max-width: 576px) {
+            #lbs-and-oz {
+                flex-direction: column;
+            } 
+            #lbs {
+                margin: 0;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <button class="open-nav" onclick="openNav()">
+            <svg fill="#000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 297" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M280.214,39.211H16.786C7.531,39.211,0,46.742,0,55.997v24.335c0,9.256,7.531,16.787,16.786,16.787h263.428 c9.255,0,16.786-7.531,16.786-16.787V55.997C297,46.742,289.469,39.211,280.214,39.211z"></path> <path d="M280.214,119.546H16.786C7.531,119.546,0,127.077,0,136.332v24.336c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.336C297,127.077,289.469,119.546,280.214,119.546z"></path> <path d="M280.214,199.881H16.786C7.531,199.881,0,207.411,0,216.668v24.335c0,9.255,7.531,16.786,16.786,16.786h263.428 c9.255,0,16.786-7.531,16.786-16.786v-24.335C297,207.411,289.469,199.881,280.214,199.881z"></path> </g> </g> </g> </g></svg>
+        </button>
+        <h1>Grams to Lbs</h1>
+    </header>
+    <nav id="navBar">
+        <button class="close-nav" onclick="closeNav()">
+            <svg fill="#fff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve" stroke="#fff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"></path> </g></svg>
+        </button>
+        <a href="../../index.html" class="home">Home</a>
+        <a href="g_to_lbs.html" class="active">Grams to Lbs</a>
+        <a href="m_to_ft.html">Meters to Feet</a>
+    </nav>
+    <article>
+        <h2>Grams (g)</h2>
+        <input id="grams">
+        <hr class="conversion-split">
+        <div id="lbs-and-oz">
+            <div id="lbs">
+                <input id="pounds">
+                <h2>Pounds (lbs)</h2>
+            </div>
+            <div id="oz">
+                <input id="ounces">
+                <h2>Ounces (oz)</h2> 
+            </div> 
+        </div>
+    </article>
+</body>
+</html>
