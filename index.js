@@ -1,6 +1,26 @@
 var listOfLinks = {}
 var autoCompleteLinks = []
-var pages = []
+
+document.addEventListener('DOMContentLoaded', function() {
+    const allPages = document.querySelectorAll('.dropdown > .dropdown-content > a')
+    allPages.forEach(page => {
+        if (page.getAttribute("href") == null) {
+            return
+        }
+        pageHref = page.getAttribute("href")
+        pageName = page.innerHTML
+        newLink = document.createElement('a')
+        newLink.href = pageHref
+        newLink.innerHTML = pageName
+
+        newLink.classList.add('result')
+
+        document.getElementById('auto-complete').appendChild(newLink)
+        newLink.classList.add('hidden')
+    });
+})
+
+
 document.addEventListener('DOMContentLoaded', function() { 
     pages = []
     autoCompleteLinks = document.getElementById("auto-complete").children
@@ -37,10 +57,6 @@ function checkFocus() {
     input = document.querySelector("input")
     var isFocused = (document.activeElement === input)
     if (isFocused == false) {
-        // var elements = document.getElementById("auto-complete").children
-        // elements.forEach((element) => {
-        //     
-        // });
         Array.from(document.getElementById("auto-complete").children).forEach(child => {
             child.classList.remove("shown")
         });
