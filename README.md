@@ -13,7 +13,7 @@ here are a list of all the current and upcoming pages on UniversalCalc Hub
 ### Lines
 - line from two points
 - line from slope and point
-- solution of two lines (### Broken - will fix later)
+- solution of two lines (Broken - will fix later)
 
 ### Gerneral Tools
 - powers (finds root, square and cubes)
@@ -22,7 +22,7 @@ here are a list of all the current and upcoming pages on UniversalCalc Hub
 
 ### Parabolas
 - Parabola from vertex and point
-- solution of parabola and line (### Might be broken)
+- solution of parabola and line (Might be broken)
 
 ### General Graphs
 - Graph from equation
