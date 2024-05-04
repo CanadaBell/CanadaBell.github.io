@@ -6,6 +6,7 @@
     --rounding: 30px;
     --dark-mode-purple: #9E00CF;
     --dark-mode-hover: #B000E6;
+    --icon-size: 5px
 }
 
 
@@ -63,13 +64,11 @@ header h1 {
 }
 #search-bar:hover {
     width: 40%;
-    background-color: #0090C3;
 
 }
 #search-bar:focus { 
     outline: 0; 
     width: 40%;
-    background-color: #0090C3;
 }
 #auto-complete {
     display: flex;
@@ -79,14 +78,16 @@ header h1 {
     
 }
 .result {
-    border: 2px solid black;
+    border-left: 2px solid #323232;
+    border-right: 2px solid #323232;
     border-top: 0;
     padding: 5px;
-    background-color: #0090C3;
+    background-color: #1b1b1b;
     text-align: start;
     text-decoration: none;
-    color: black;
+    color: #f3f0ce;
 }
+.result:last-of-type { border-bottom: 2px solid #323232; }
 .hidden {display: none;}
 .shown {display: flex;}
 nav {
@@ -96,7 +97,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-    column-gap: 20px; /* Adjust this value to change the gap between columns */
+    column-gap: 20px;
     row-gap: 10px;
     background-color: #232323;
     color: #f3f0ce;
@@ -160,7 +161,23 @@ nav {
     border-radius: 0 0 calc(var(--rounding) / 2) calc(var(--rounding) / 2);
 }
 
-
+#github-link {
+    position: absolute;
+    background-image: url('../github-mark/github-mark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: var(--icon-size);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all  250ms ease;
+}
+#github-link:hover {
+    opacity: 1;
+}
 
 @media screen and (max-width: 576px) {
     header { 
