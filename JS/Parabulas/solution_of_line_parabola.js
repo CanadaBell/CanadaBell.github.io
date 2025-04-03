@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => { // Code that reads inputs
         //console.log(lineY, lineX, lineB)
 
         matchVertexForm = similarity(parabolaFormula, 'y = a(x - p)^2 + q')
-        matchParabolaStandard  = similarity(parabolaFormula, 'y = ax^2 = bx + c')
+        matchParabolaStandard  = similarity(parabolaFormula, 'y = ax^2 + bx + c')
 
         mostInCommon = Math.max(matchVertexForm, matchParabolaStandard) // Finds the biggest number
 
